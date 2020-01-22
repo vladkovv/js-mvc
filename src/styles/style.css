@@ -1,0 +1,35 @@
+#logo {
+    color: #0000ff;
+    text-align: center;
+}
+.date-weight {
+    display: flex;
+    align-items: flex-start;
+}
+
+.date-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-right: 50px;
+}
+#selDate {
+    margin-top: 15px;
+}
+.weight {
+    margin-left: 350px;
+}
+#weight-inp {
+    width: 280px;
+    height: 25px;
+}   
+.enter-weight {
+    display: flex;
+    flex-direction: column;
+}
+#submit {
+    height: 25px;
+    margin-top: 10px;
+    color: #2871bb;
+}
