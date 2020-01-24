@@ -31,7 +31,7 @@
 .weight-inp {
     height: 25px;
 }
-.submit-button {
+.submit {
     height: 30px;
     margin-top: 7px;
     background: #016ABC;
@@ -40,7 +40,7 @@
     box-shadow: 5px 5px 5px #eee;
     text-shadow:none;
 }
-.submit-button:hover {
+.submit:hover {
     height: 30px;
     margin-top: 7px;
     background: #B9DFFF;
@@ -78,6 +78,7 @@ li {
 .delete {
     margin-left: 80px;
     background-color: red; 
+    color: white;
     height: 30px;
     width: 80px;
      }

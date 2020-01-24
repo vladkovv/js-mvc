@@ -4,6 +4,7 @@ class View {
 
     this.logo = this.createElement('h1','logo')
     this.logo.textContent = 'Отслеживание веса'
+
     this.inpForm = this.createElement('form','inp-form');  
     this.dateForm = this.createElement('form','date')
 
@@ -39,7 +40,7 @@ class View {
     this.weightInp.type = 'number';
     this.weightInp.placeholder = 'Введите вес в кг...';
 
-    this.submitButton = this.createElement('button','submit-button');
+    this.submitButton = this.createElement('button','submit');
     this.submitButton.textContent = 'Отправить данные';
 
     this.weightForm.append(this.weightLabel, this.weightInp, this.submitButton); 
@@ -72,8 +73,8 @@ class View {
         return element
       }
 
-      get weightText() {
-        return this.dateInp.value + this.weightInp.value;
+      get weightNumber() {
+        return this.weightInp.value;
       }
 
       resetInput() {
@@ -115,6 +116,26 @@ class View {
         console.log(weights)
         
       }
+
+      bindAddWeight(handler) {
+        this.inpForm.addEventListener('submit', event => {
+          event.preventDefault()
+
+          if (this.weightNumber) {
+            handler(this.weightNumber)
+            this.resetInput();
+          }
+        })
+      }
+      bindDeleteWeight(handler) {
+        this.outpDiv.addEventListener('click', event => {
+          if(event.target.className === 'delete') {
+            const id = parseInt(event.target.parentElement.id)
+
+            handler(id);
+          }
+        })
+      } 
 
 
 }
